@@ -8,6 +8,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
+import 'package:leads_test/cart_page.dart';
 import 'package:leads_test/product_detail.dart';
 import 'package:sizer/sizer.dart';
 //import 'package:shared_preferences/shared_preferences.dart';
@@ -108,7 +109,7 @@ class _HomeState extends State<Home> {
 
 
 
-  Map <String, dynamic>? apiMap;
+  //Map <String, dynamic>? apiMap;
   List<dynamic>? list,list1;
 
   Future getUserData() async
@@ -145,8 +146,30 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
 
           title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Home"),
+              InkWell(
+
+                onTap: (){
+
+
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return CartPage();
+                      },
+                    ),
+                  );
+
+
+                },
+
+
+                child: Icon(Icons.shopping_cart),
+              )
 
             ],
           )

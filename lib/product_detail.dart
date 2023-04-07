@@ -7,6 +7,7 @@ import 'package:quantity_input/quantity_input.dart';
 
 import 'check_out.dart';
 
+
 class ProductDetail extends StatefulWidget
 {
   final String id ,description, imgUrl,title,price;
@@ -109,33 +110,50 @@ class _ProductDetailState extends State<ProductDetail>{
 
 
               SizedBox(height: 30,),
-              ElevatedButton(
 
-                  onPressed: (){
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
 
+                  ElevatedButton(
 
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return CheckOut(
-
-                            name:widget.title,
-                              id:widget.id,
-                              price: widget.price,
-                              quantity: simpleIntInput.toString()
+                      onPressed: (){
 
 
-                          );
-                        },
-                      ),
-                    );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return CheckOut(
+
+                                  name:widget.title,
+                                  id:widget.id,
+                                  price: widget.price,
+                                  quantity: simpleIntInput.toString()
+
+
+                              );
+                            },
+                          ),
+                        );
 
 
 
-                  },
-                  child: Text("Check out")
+                      },
+                      child: Text("Check out")
+                  ),
+
+                  ElevatedButton(
+
+                      onPressed: (){
+
+                      },
+                      child: Text("Add to Cart")
+                  ),
+
+                ],
               ),
+
 
               SizedBox(height: 50,)
 
