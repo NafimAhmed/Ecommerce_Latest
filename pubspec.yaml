@@ -27,6 +27,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  webview_flutter: ^3.0.4
   equatable: ^2.0.5
   quantity_input: ^1.0.2
   sizer: ^2.0.15

@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.leads_test">
-   <application
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
         android:label="leads_test"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

@@ -3,8 +3,10 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:quantity_input/quantity_input.dart';
 
+import 'ar_page.dart';
 import 'check_out.dart';
 
 
@@ -58,15 +60,58 @@ class _ProductDetailState extends State<ProductDetail>{
 
               SizedBox(height: 20,),
 
+              Text("Price : ${widget.price}",
 
-
-                  Text("Price : ${widget.price}",
-
-                  style: TextStyle(
-                      fontSize: 20
-                  ),
-
+                style: TextStyle(
+                    fontSize: 20
                 ),
+
+              ),
+
+                  SizedBox(height: 20,),
+
+
+
+                  ////////AR////////////////////////////////
+
+
+             InkWell (
+               onTap: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(
+                     builder: (context) {
+                       return ArPage();
+                     },
+                   ),
+                 );
+               },
+               child:Container (
+               margin: EdgeInsets.symmetric(
+                 vertical: 30,
+               ),
+               child : Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+
+                  Text("See the 3D View",
+                    style: TextStyle(
+                        fontSize: 20
+                    ),
+                  ),
+                  Icon(Icons.view_in_ar,
+                      size: 70,),
+
+                ],
+              ),),),
+
+
+
+
+              ////////////////////////////////////////
+
+
+
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -146,6 +191,10 @@ class _ProductDetailState extends State<ProductDetail>{
                   ElevatedButton(
 
                       onPressed: (){
+
+
+
+
 
                       },
                       child: Text("Add to Cart")
