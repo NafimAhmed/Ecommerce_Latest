@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leads_test/login.dart';
 import 'package:sizer/sizer.dart';
 
 import 'home.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
 
               primarySwatch: Colors.pink,
             ),
-            home: Home(),
+            home: Login()//Home(),
           );
         });
   }
