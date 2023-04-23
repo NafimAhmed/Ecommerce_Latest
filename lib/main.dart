@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:leads_test/login.dart';
 import 'package:sizer/sizer.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return Sizer(
         builder: (context, orientation, deviceType){
 
-          return MaterialApp(
+          return GetMaterialApp(
             title: 'Flutter Demo',
             theme: ThemeData(
 

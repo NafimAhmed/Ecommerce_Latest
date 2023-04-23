@@ -1,7 +1,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:leads_test/registration.dart';
+
+import 'bottom_bar.dart';
 
 class Login extends StatelessWidget
 {
@@ -91,7 +95,7 @@ class Login extends StatelessWidget
           ElevatedButton(
             onPressed: () {
 
-              Navigator.pop(context);
+             // Navigator.pop(context);
 
               // Navigator.push(
               //     context,
@@ -99,9 +103,9 @@ class Login extends StatelessWidget
               //         builder: (context) =>
               //             BottomBar()));
 
-              // Get.to(BottomBar(),
-              //     duration: Duration(milliseconds: 500), //duration of transitions, default 1 sec
-              //     transition: Transition.rightToLeft );
+              Get.to(BottomBar(),
+                  duration: Duration(milliseconds: 500), //duration of transitions, default 1 sec
+                  transition: Transition.rightToLeft );
 
 
 
@@ -142,11 +146,11 @@ class Login extends StatelessWidget
             onTap: (){
 
 
-              // Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (context) =>
-              //             RegistrationScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          Registration()));
 
               // Get.to(RegistrationScreen());
 
